@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Abdulwahed Zuhair — personal portfolio showcasing projects, GitHub repo, and contact form." />
+  <title>Abdulwahed | Personal Portfolio</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header>
+    <div class="header-inner">
+      <div class="brand">
+        <h1>Abdulwahed Zuhair</h1>
+        <p class="subtitle">Computer Science student — front-end developer</p>
+      </div>
+
+      <div class="controls" role="region" aria-label="User controls">
+        <p id="greeting" aria-live="polite" class="greeting"></p>
+        <button id="theme-toggle" aria-pressed="false" class="btn">Toggle Theme</button>
+        <button id="auth-toggle" class="btn">Sign In</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section id="about" class="card">
+      <h2>About Me</h2>
+      <p>I am a Computer Science student learning front-end development. I enjoy solving problems and bringing ideas to life with clean, efficient code.</p>
+      <ul>
+        <li>I love mathematics and enjoy using logic to solve problems.</li>
+        <li>I'm passionate about video games and exploring their worlds.</li>
+        <li>I keep up with the latest in technology, from phones to software.</li>
+      </ul>
+    </section>
+
+    <section id="projects-section" class="card">
+      <h2>My Projects</h2>
+
+      <div class="project-controls">
+        <div id="filter-controls" class="filters" aria-label="Project filters">
+          <button data-filter="all" class="filter-btn">Show All</button>
+          <button data-filter="Web Dev" class="filter-btn">Web Projects</button>
+          <button data-filter="Design" class="filter-btn">Design Projects</button>
+        </div>
+
+        <div class="sort-controls" aria-label="Sort projects">
+          <label for="sort-select">Sort:</label>
+          <select id="sort-select" aria-label="Sort projects">
+            <option value="date-desc">Newest</option>
+            <option value="date-asc">Oldest</option>
+            <option value="title-asc">Title A→Z</option>
+            <option value="title-desc">Title Z→A</option>
+          </select>
+        </div>
+
+        <div class="toggle-projects">
+          <button id="show-hide-projects" class="btn">Hide Projects</button>
+        </div>
+      </div>
+
+      <div id="projects-container" class="projects-grid" aria-live="polite"></div>
+
+      <p id="empty-state" class="empty-state" hidden>No projects found matching the criteria. Try a different filter!</p>
+
+      <h3>Featured repository</h3>
+      <div id="github-repos" class="github-repos" aria-live="polite">Loading repository...</div>
+    </section>
+
+    <section id="contact" class="card">
+      <h2>Get In Touch</h2>
+      <p>Have a question or want to work together? Send me a message!</p>
+
+      <div id="form-feedback" class="form-feedback" aria-live="polite" hidden></div>
+
+      <form id="contact-form" novalidate>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+        <p class="error-message" id="name-error">Please enter your name.</p>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+        <p class="error-message" id="email-error">A valid email is required.</p>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+        <p class="error-message" id="message-error">Message cannot be empty.</p>
+
+        <button type="submit" id="send-btn" class="btn primary">Send Message</button>
+      </form>
+
+      <div class="session-info">
+        <p id="visit-timer">You've been on this page: <span id="timer">0s</span></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Abdulwahed Zuhair Adi</p>
+    <p>Email: <a href="mailto:s202256380@kfupm.edu.sa">s202256380@kfupm.edu.sa</a></p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
