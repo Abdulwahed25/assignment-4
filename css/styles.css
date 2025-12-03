@@ -11,16 +11,15 @@
     --danger:#f8d7da;
   }
   
-  /* 🌙 DARK MODE FIXED — High contrast & readable */
   body.dark-mode{
     --primary-bg:#0f1720;
     --main-bg:#111827;
-    --text-color:#e8eef6;      /* brighter text */
-    --accent:#22c5e5;          /* brighter accent */
-    --muted:#a3b5c6;           /* readable muted text */
-    --card-bg:#1b2432;         /* no more almost-black */
-    --card-border:#394552;     /* visible border */
-    --btn-bg:#38bdf8;          /* bright button in dark mode */
+    --text-color:#e8eef6;
+    --accent:#22c5e5;          
+    --muted:#a3b5c6;          
+    --card-bg:#1b2432;         
+    --card-border:#394552;     
+    --btn-bg:#38bdf8;          
   }
   
   *{
@@ -82,7 +81,7 @@
   .btn{
     padding:8px 12px;
     border-radius:8px;
-    border:1px solid rgba(255,255,255,0.15); /* fixed for dark mode */
+    border:1px solid rgba(255,255,255,0.15); 
     background:transparent;
     color:var(--text-color);
     cursor:pointer;
@@ -114,7 +113,7 @@
     padding:18px;
     border-radius:8px;
     margin-bottom:18px;
-    box-shadow:0 6px 18px rgba(2,6,23,0.12); /* stronger shadow for dark mode */
+    box-shadow:0 6px 18px rgba(2,6,23,0.12); 
   }
   
   /* FILTERS */
@@ -163,7 +162,7 @@
   }
   .project-card:hover{
     transform:translateY(-6px);
-    box-shadow:0 14px 30px rgba(2,6,23,0.28); /* visible in dark mode */
+    box-shadow:0 14px 30px rgba(2,6,23,0.28); 
   }
   .project-card img{
     width:100%;
